@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service InferenceService {
+  rpc Generate (PromptRequest) returns (PromptResponse);
+}
+
+message PromptRequest {
+  string prompt = 1;
+}
+
+message PromptResponse {
+  string output = 1;
+}
